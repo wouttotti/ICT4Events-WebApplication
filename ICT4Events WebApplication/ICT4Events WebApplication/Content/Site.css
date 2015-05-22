@@ -44,6 +44,8 @@ mark {
 
 .float-left {
     float: left;
+    width: 254px;
+    height: 170px;
 }
 
 .float-right {
@@ -444,7 +446,8 @@ fieldset {
         font-size: 1em;
         padding: 4px;
         margin-right: 4px;
-    }
+    height: 32px;
+}
 
 /* info and errors */
 .message-info {

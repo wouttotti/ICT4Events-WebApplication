@@ -4,7 +4,7 @@
 <html lang="en">
 <head runat="server">
     <meta charset="utf-8" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <title><%: Page.Title %> - ICT4Events</title>
     <asp:PlaceHolder runat="server">     
           <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>  
@@ -38,34 +38,24 @@
     </asp:ScriptManager>
     <header>
         <div class="content-wrapper">
-            <div class="float-left">
+            <div class="float-left"  style="margin-bottom: 20px">
                 <p class="site-title">
-                    <a runat="server" href="~/">your logo here</a>
-                </p>
+                    <img src="logo.png" alt="Logo" style="height: 140px; width: 234px">&nbsp;&nbsp;&nbsp; ICT4Events
             </div>
-            <div class="float-right">
+            <div style="float: right; margin-top: 100px">
                 <section id="login">
-                    <asp:LoginView runat="server" ViewStateMode="Disabled">
-                        <AnonymousTemplate>
-                            <ul>
-                                <li><a id="registerLink" runat="server" href="~/Account/Register">Register</a></li>
-                                <li><a id="loginLink" runat="server" href="~/Account/Login">Log in</a></li>
-                            </ul>
-                        </AnonymousTemplate>
-                        <LoggedInTemplate>
-                            <p>
-                                Hello, <a runat="server" class="username" href="~/Account/Manage" title="Manage your account">
-                                    <asp:LoginName runat="server" CssClass="username" /></a>!
-                                <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
-                            </p>
-                        </LoggedInTemplate>
-                    </asp:LoginView>
+                    <ul>
+                        <li><a id="registerLink" runat="server" href="/WebForms/Inloggen.aspx">Inloggen</a></li>
+                        <li><a id="loginLink" runat="server" href="/WebForms/Uitloggen.aspx">Uitloggen</a></li>
+                    </ul>
                 </section>
                 <nav>
                     <ul id="menu">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                        <li><a runat="server" href="/WebForms/Home.aspx"> Home</a></li>
+                        <li><a runat="server" href="/WebForms/Feed.aspx"> Feed</a></li>
+                        <li><a runat="server" href="/WebForms/Reserveren.aspx"> Reserveren</a></li>
+                        <li><a runat="server" href="/WebForms/Huren.aspx"> Huren</a></li>
+                        <li><a runat="server" href="/WebForms/Beheren.aspx"> Beheren</a></li>
                     </ul>
                 </nav>
             </div>
@@ -80,7 +70,7 @@
     <footer>
         <div class="content-wrapper">
             <div class="float-left">
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <p>&copy; <%: DateTime.Now.Year %> - ICT4Events</p>
             </div>
         </div>
     </footer>
