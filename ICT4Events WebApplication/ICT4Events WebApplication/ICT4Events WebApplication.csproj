@@ -246,9 +246,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="App_Start\AuthConfig.cs" />
-    <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="WebForms\Beheren.aspx.cs">
       <DependentUpon>Beheren.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -324,9 +321,7 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Site.Master" />
   </ItemGroup>
