@@ -40,17 +40,17 @@
         <div class="content-wrapper">
             <div class="float-left"  style="margin-bottom: 20px">
                 <p class="site-title">
-                    <img src="logo.png" alt="Logo" style="height: 140px; width: 234px">&nbsp;&nbsp;&nbsp; ICT4Events
+                    <img src="logo.png" alt="Logo" style="height: 140px; width: 234px"> ICT4Events
             </div>
             <div style="float: right; margin-top: 100px">
                 <section id="login">
-                    <ul>
+                    <ul style="font-family: Consolas">
                         <li><a id="registerLink" runat="server" href="/WebForms/Inloggen.aspx">Inloggen</a></li>
                         <li><a id="loginLink" runat="server" href="/WebForms/Uitloggen.aspx">Uitloggen</a></li>
                     </ul>
                 </section>
                 <nav>
-                    <ul id="menu">
+                    <ul id="menu" style="font-family: Consolas">
                         <li><a runat="server" href="/WebForms/Home.aspx"> Home</a></li>
                         <li><a runat="server" href="/WebForms/Feed.aspx"> Feed</a></li>
                         <li><a runat="server" href="/WebForms/Reserveren.aspx"> Reserveren</a></li>
