@@ -67,7 +67,7 @@ namespace ICT4Events_WebApplication
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            LbUsername.Visible = false;
         }
     }
 }

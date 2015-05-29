@@ -4,7 +4,7 @@
 <html lang="en">
 <head runat="server">
     <meta charset="utf-8" />
-    <title><%: Page.Title %> - ICT4Events</title>
+    <title><%: Page.Title %>- ICT4Events</title>
     <asp:PlaceHolder runat="server">     
           <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>  
@@ -43,9 +43,13 @@
                     <img src="logo.png" alt="Logo" style="height: 140px; width: 234px"> ICT4Events
             </div>
             <div style="float: right; margin-top: 100px">
+                <asp:Label ID="LbUsername" runat="server" Text="Username" style="float: right; font-family: Consolas"></asp:Label>
+                <br />
+                <br />
                 <section id="login">
                     <ul style="font-family: Consolas">
-                        <li><a id="registerLink" runat="server" href="/WebForms/Inloggen.aspx">Inloggen</a></li>
+                        <li>
+                            <a id="registerLink" runat="server" href="/WebForms/Inloggen.aspx">Inloggen</a></li>
                         <li><a id="loginLink" runat="server" href="/WebForms/Uitloggen.aspx">Uitloggen</a></li>
                     </ul>
                 </section>
@@ -69,8 +73,19 @@
     <footer>
         <div class="content-wrapper">
             <div class="float-left">
-                <p>&copy; <%: DateTime.Now.Year %> - ICT4Events</p>
+                <p>&copy; <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=272931&clcid=0x409 --%>- ICT4Events</p>
             </div>
+              <script type="text/javascript" src="jquery-1.7.1.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#track1').click(function () {
+            $('#wrap').append('<embed id="embed_player" src="Play.wav" autostart="true" hidden="true"></embed>');
+        });
+    });
+</script>
+<img name="track1" src="images/play.png" width="20" height="20" style="float:right" border="0" id="track1" alt="" />
+<div id="wrap"></div>
+
         </div>
     </footer>
     </form>
