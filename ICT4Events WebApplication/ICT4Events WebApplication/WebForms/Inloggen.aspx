@@ -4,4 +4,13 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
+    <div align="center">
+        <asp:Label ID="Label3" runat="server" Text="Gebruikersnaam:"></asp:Label>
+        <br />
+        <asp:TextBox ID="TbGebruikersnaam" runat="server"  style="display:inline-block"></asp:TextBox>
+        <br />
+        <asp:Label ID="Label2" runat="server" Text="Wachtwoord:"></asp:Label>
+        <br />
+        <asp:TextBox ID="TbWachtwoord" runat="server"  style="display:inline-block"></asp:TextBox>
+    </div>
 </asp:Content>
