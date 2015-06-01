@@ -72,9 +72,6 @@
     </div>
     <footer>
         <div class="content-wrapper">
-            <div class="float-left">
-                <p>&copy; <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=272931&clcid=0x409 --%>- ICT4Events</p>
-            </div>
               <script type="text/javascript" src="jquery-1.7.1.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
