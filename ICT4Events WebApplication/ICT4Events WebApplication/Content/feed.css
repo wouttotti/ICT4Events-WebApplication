@@ -1,0 +1,59 @@
+﻿body {
+}
+.berichtplaatsen
+{
+    
+}
+
+.tbTitel
+{
+    display: inline-block;
+    float: left;
+    }
+
+.Label1, Label2, Label3
+{
+    margin-top:12px;
+    display: inline-block;
+    float: left;
+
+}
+.btBrowse
+{
+    margin-left: 5px;
+    border-radius: 4px;
+}
+.btPost
+{
+    float:right;
+    border-radius: 4px;
+}
+.lbCategorie
+{
+    display: inline-block;
+    float: left;
+    margin-left: 5px;
+    margin-top: 12px;
+}
+.cbCategorie
+{
+    display: inline-block;
+    float: left;
+    margin-top: 5px;
+    margin-left: 5px;
+    height: 30px;
+}
+.tbBericht
+{
+    resize: none;
+}
+.RadioButtonSoort
+{
+display: inline-block;
+float: left;
+margin-left: 50px;
+}
+.RadioButtonSoort1
+{
+    margin-left: 0px;
+}
