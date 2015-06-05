@@ -18,8 +18,17 @@
         });
     </script>
     <div class ="placeholderReserveren">
-    <asp:CheckBoxList class="checkListGebruikers" ID="checkListGebruikers" runat="server" Width="148px">
-    </asp:CheckBoxList>
+        <div class="gridViewGebruikers" align="center">
+        <asp:SqlDataSource ID="AlleGebruikers" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT ID, &quot;voornaam&quot;, &quot;tussenvoegsel&quot;, &quot;achternaam&quot; FROM PERSOON"></asp:SqlDataSource>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="AlleGebruikers">
+            <Columns>
+                <asp:BoundField DataField="ID" HeaderText="ID" ReadOnly="True" SortExpression="ID" />
+                <asp:BoundField DataField="voornaam" HeaderText="voornaam" SortExpression="voornaam" />
+                <asp:BoundField DataField="tussenvoegsel" HeaderText="tussenvoegsel" SortExpression="tussenvoegsel" />
+                <asp:BoundField DataField="achternaam" HeaderText="achternaam" SortExpression="achternaam" />
+            </Columns>
+        </asp:GridView>
+        </div>
     <br/>
     <div align="center">
         <asp:Label ID="lblKampeerplaats" runat="server" Text="Selecteer een kampeerplaats:"></asp:Label>

@@ -4,10 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using ICT4Events_WebApplication.Classes;
 
 namespace ICT4Events_WebApplication
 {
-    using ICT4Events_WebApplication.Classes;
 
     public partial class Reserveren : System.Web.UI.Page
     {
