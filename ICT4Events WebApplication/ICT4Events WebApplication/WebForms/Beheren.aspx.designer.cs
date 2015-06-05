@@ -112,13 +112,13 @@ namespace ICT4Events_WebApplication {
         protected global::System.Web.UI.WebControls.Label lbWachtwoord;
         
         /// <summary>
-        /// TextBox3 control.
+        /// tbWachtwoord control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox tbWachtwoord;
         
         /// <summary>
         /// cbAdmin control.
@@ -173,6 +173,15 @@ namespace ICT4Events_WebApplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList dplBetaalStatus;
+        
+        /// <summary>
+        /// lbBetaald control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbBetaald;
         
         /// <summary>
         /// lbInchecken control.
