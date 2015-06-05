@@ -13,6 +13,33 @@ namespace ICT4Events_WebApplication {
     public partial class Reserveren {
         
         /// <summary>
+        /// checkListGebruikers control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBoxList checkListGebruikers;
+        
+        /// <summary>
+        /// lblKampeerplaats control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblKampeerplaats;
+        
+        /// <summary>
+        /// tbKampeerplaats control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbKampeerplaats;
+        
+        /// <summary>
         /// lnkBtnMap control.
         /// </summary>
         /// <remarks>
@@ -22,13 +49,13 @@ namespace ICT4Events_WebApplication {
         protected global::System.Web.UI.WebControls.LinkButton lnkBtnMap;
         
         /// <summary>
-        /// checkListGebruikers control.
+        /// btnReserveren control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList checkListGebruikers;
+        protected global::System.Web.UI.WebControls.Button btnReserveren;
         
         /// <summary>
         /// checkListReserveringen control.
@@ -40,21 +67,12 @@ namespace ICT4Events_WebApplication {
         protected global::System.Web.UI.WebControls.CheckBoxList checkListReserveringen;
         
         /// <summary>
-        /// calAankomstDatum control.
+        /// btnBetaald control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar calAankomstDatum;
-        
-        /// <summary>
-        /// calVertrekDatum control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar calVertrekDatum;
+        protected global::System.Web.UI.WebControls.Button btnBetaald;
     }
 }
