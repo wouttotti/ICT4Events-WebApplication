@@ -67,6 +67,15 @@ namespace ICT4Events_WebApplication {
         protected global::System.Web.UI.WebControls.Button btnWissen;
         
         /// <summary>
+        /// lblBorg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblBorg;
+        
+        /// <summary>
         /// btnUitlenen control.
         /// </summary>
         /// <remarks>
@@ -74,5 +83,23 @@ namespace ICT4Events_WebApplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnUitlenen;
+        
+        /// <summary>
+        /// tbGebruikersnaam control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbGebruikersnaam;
+        
+        /// <summary>
+        /// tbRFID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbRFID;
     }
 }
