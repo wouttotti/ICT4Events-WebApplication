@@ -3,9 +3,6 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
 <script>
-    function showInfo() {
-        alert('Dit is de info');
-    };
 </script>
 <style>
     
@@ -64,7 +61,7 @@ h3 {
 }
 
 .wissen {
-    margin-left: 101px;
+    margin-left: 198px;
 }
 
 .uitlenenButton {
@@ -74,15 +71,18 @@ h3 {
 .btn {
     border-radius: 2px;
     color: white;
+    font-size: 16pt;
+}
+
+.borg {
+    font-size: 16pt;
+    color: #6E5A7A;
 }
 
 .tekstbox {
     border-radius: 2px;
 }
 
-/*.infoButton {
-    margin-left: 40px;
-}*/
 </style>
 
 <div class="holder">
@@ -95,20 +95,22 @@ h3 {
         <div class="cbl_container" style="margin-right: 75px;">
             <asp:CheckBoxList ID="CheckBoxList1" runat="server"></asp:CheckBoxList>
             <div>
-            	<asp:Button id="btnVerplaatsen" Text=">>" BackColor="#6E5A7A" CssClass="btn btnVerplaatsen" runat="server" />
+            	<asp:Button id="btnVerplaatsen" Text=">>" BackColor="#6E5A7A" CssClass="btn btnVerplaatsen" runat="server" Font-Size="14pt" />
             </div>
 		</div>
         <div class="cbl_container">
             <asp:CheckBoxList ID="CheckBoxList2" runat="server"></asp:CheckBoxList>
         </div>
         <div class="container-footer">
-        		<!--<h3 id="container-footer">Zoek op exemplaar:</h3>-->
-				<asp:TextBox id="tb" runat="server" CssClass="tekstbox" BorderColor="#6E5A7A" placeholder="Exemplaar ID" BorderStyle="Solid" BorderWidth="2px"/>
-        		<!--<h3 class="uitlenen" id="container-footer">Leen materiaal uit:</h3>--> 
-				
-                <asp:Button id="btnInfo" CssClass="btn" Text="Info" BackColor="#6E5A7A" runat="server" OnClick="btnInfo_Click" />
-                <asp:Button id="btnWissen" CssClass="wissen btn" Text="Wissen" runat="server" BackColor="#6E5A7A" />
-                <asp:Button id="btnUitlenen" Text="Uitlenen" CssClass="btn uitlenenButton" runat="server" BackColor="#6E5A7A" />
+			<asp:TextBox id="tb" runat="server" CssClass="tekstbox" BorderColor="#6E5A7A" placeholder="Exemplaar ID" BorderStyle="Solid" BorderWidth="2px"/>
+            <asp:Button id="btnInfo" CssClass="btn" Text="Info" BackColor="#6E5A7A" runat="server" OnClick="btnInfo_Click" Font-Size="16pt" />
+            <asp:Button id="btnWissen" CssClass="btn wissen" Text="Wissen" runat="server" BackColor="#6E5A7A" Font-Size="16pt" />
+            <asp:Label ID="lblBorg" runat="server" CssClass="borg" Text="Borg: "></asp:Label>
+            <asp:Button id="btnUitlenen" Text="Uitlenen" CssClass="btn uitlenenButton" runat="server" BackColor="#6E5A7A" Font-Size="16pt" />
+        </div>
+        <div>
+            <asp:TextBox id="tbGebruikersnaam" runat="server" CssClass="tekstbox" BorderColor="#6E5A7A" placeholder="Gebruikersnaam" BorderStyle="Solid" BorderWidth="2px"/>
+            <asp:TextBox id="tbRFID" runat="server" CssClass="tekstbox" BorderColor="#6E5A7A" placeholder="RFID" BorderStyle="Solid" BorderWidth="2px"/>
         </div>
 </div>
 </asp:Content>
