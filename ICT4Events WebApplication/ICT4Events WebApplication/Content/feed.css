@@ -1,8 +1,10 @@
 ﻿body {
 }
-.berichtplaatsen
+#berichtplaatsen
 {
-    
+    width: 738px;
+    display: inline-block;
+    float: left;
 }
 
 .tbTitel
@@ -16,17 +18,20 @@
     margin-top:12px;
     display: inline-block;
     float: left;
-
+    font-family: Consolas;
 }
 .btBrowse
 {
     margin-left: 5px;
     border-radius: 4px;
+    font-family: Consolas;
+    margin-right: 0px;
 }
 .btPost
 {
     float:right;
     border-radius: 4px;
+    font-family: Consolas;
 }
 .lbCategorie
 {
@@ -34,6 +39,7 @@
     float: left;
     margin-left: 5px;
     margin-top: 12px;
+    font-family: Consolas;
 }
 .cbCategorie
 {
@@ -52,8 +58,59 @@
 display: inline-block;
 float: left;
 margin-left: 50px;
+font-family: Consolas;
 }
 .RadioButtonSoort1
 {
     margin-left: 0px;
+    display: normal;
+    clear: both;
+}
+.CheckBox
+{
+    margin-left: 15px;
+    display: inline-block;
+    float: left;
+    font-family: Consolas;
+}
+.CheckBox1
+{
+    margin-left: 0px;
+}
+.Lbsorteer
+{
+    margin-top: 12px;
+    font-family: Consolas;
+    width: 180px;
+    clear: both;
+}
+#sorteermenu
+{
+    display: inline-block;
+    float: left;
+    width: 222px;
+}
+#sorteermenu1
+{
+    clear: both;
+    float: left;
+}
+#sorteermenu2
+{
+    clear: both;
+    float: left;
+}
+#feed
+{
+    margin-top: 25px;
+    display:inline-block;
+    float: left;
+}
+.CheckBoxsorteer
+{
+
+}
+.CheckBoxsorteer1
+{
+
 }
