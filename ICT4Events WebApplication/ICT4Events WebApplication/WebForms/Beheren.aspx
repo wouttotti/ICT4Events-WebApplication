@@ -2,13 +2,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-    <div id="Gebruikers" style="width:250px; height: 450px; float: left; margin-left:100px; display:block">
+    <div id="Gebruikers" style="width:250px; height: 450px; float: left; display:block">
         <asp:Label ID="LbGebruiker" runat="server" Text="Gebruikers"></asp:Label>
         <br />
         <asp:ListBox ID="LbGebruikers" runat="server" Height="400px" Width="250px"></asp:ListBox>
 
     </div>
-    <div style="float:left; margin-left:20px; margin-right:20px; margin-top:20px; width:auto; height:450px; display:inline-block" align="center">
+    <div style="float:left; margin-left:110px; margin-right:110px; margin-top:20px; display:inline-block" align="center">
         <asp:Button ID="btnAanpassen" runat="server" Text="Aanpassen"/>
         <br />
         <asp:Button ID="btnLaatzien" runat="server" Text="Laat zien"/>
@@ -32,14 +32,14 @@
         <br />
         <asp:TextBox ID="tbWachtwoord" runat="server" Width="150px"></asp:TextBox>
         <br />
-        <asp:CheckBox ID="cbAdmin" runat="server" Text="Admin:" TextAlign="Left" />
+        <asp:CheckBox ID="cbAdmin" runat="server" Text="Admin:" TextAlign="Left" Font-Bold="False" Font-Size="X-Small" />
         <br />
         <asp:Button ID="btnAanmaken" runat="server" Text="Aanmaken" />
         <asp:Button ID="btnWijzigen" runat="server" Text="Wijzigen" />
         </section>
         <br />
         <section>
-        <asp:Label ID="lbBetaalstatus" runat="server" Text="Betaalstatus" Visible="False" Font-Bold="True" Font-Size="Medium"></asp:Label>
+        <asp:Label ID="lbBetaalstatus" runat="server" Text="Betaalstatus" Font-Bold="True" Font-Size="Medium"></asp:Label>
         <br />
         <asp:Button ID="btnChkStatus" runat="server" Text="Check betaal status" />
         <asp:DropDownList ID="dplBetaalStatus" runat="server"></asp:DropDownList>
@@ -58,7 +58,7 @@
         <br />
         <asp:Panel ID="pnStatus" runat="server"></asp:Panel>
         <br />
-        <asp:Label ID="lbStatus" runat="server" Text="Barcode Status" ClientIDMode="AutoID"></asp:Label>
+        <asp:Label ID="lbStatus" runat="server" Text="Barcode Status" ClientIDMode="AutoID" Visible="False"></asp:Label>
         </section>
     </div>
     </asp:Content>
