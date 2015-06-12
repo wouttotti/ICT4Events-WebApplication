@@ -13,13 +13,22 @@ namespace ICT4Events_WebApplication {
     public partial class Reserveren {
         
         /// <summary>
-        /// checkListGebruikers control.
+        /// AlleGebruikers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList checkListGebruikers;
+        protected global::System.Web.UI.WebControls.SqlDataSource AlleGebruikers;
+        
+        /// <summary>
+        /// GridView1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
         /// lblKampeerplaats control.

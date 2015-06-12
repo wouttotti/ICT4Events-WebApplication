@@ -14,5 +14,15 @@ namespace ICT4Events_WebApplication
 
         }
 
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Unnamed15_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
