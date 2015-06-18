@@ -34,7 +34,7 @@
         <br />
         <asp:CheckBox ID="cbAdmin" runat="server" Text="Admin:" TextAlign="Left" Font-Bold="False" Font-Size="X-Small" />
         <br />
-        <asp:Button ID="btnAanmaken" runat="server" Text="Aanmaken" />
+        <asp:Button ID="btnAanmaken" runat="server" Text="Aanmaken" OnClick="btnAanmaken_Click" />
         <asp:Button ID="btnWijzigen" runat="server" Text="Wijzigen" />
         </section>
         <br />

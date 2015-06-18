@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data;
 using Oracle.DataAccess.Client;
 using Oracle.DataAccess.Types;
 
@@ -30,7 +31,6 @@ namespace ICT4Events_WebApplication.Classes
             {
                 MessageBox.Show(exc.Message);
             }
-            
         }
 
         //Er wordt een query uitgevoert en de data wordt opgeslagen in een datatable
@@ -55,6 +55,12 @@ namespace ICT4Events_WebApplication.Classes
                 command.Dispose();
             }
             return null;
+        }
+
+        public void voerProcedureUit(string gebruikersnaam, string email)
+        
+        {
+            connection.Open();
         }
 
         //Er wordt een insert query gedaan in de database
