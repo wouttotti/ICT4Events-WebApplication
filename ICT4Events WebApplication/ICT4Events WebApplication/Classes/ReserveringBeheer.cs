@@ -12,6 +12,14 @@ namespace ICT4Events_WebApplication.Classes
     {
         private static Database database = new Database();
 
+        /// <summary>
+        /// Deze methode voert een query uit die er voor zorgt dat er een reservering aangemaakt wordt in de database
+        /// </summary>
+        /// <param name="persoonID">Het ID van de hoofdboeker, die opgeslagen is in de tabel persoon</param>
+        /// <param name="aankomstDatum">De datum waarop de hoofdboeker aankomt</param>
+        /// <param name="vertrekDatum">De dattum waarop de hoofdboeker vertrekt</param>
+        /// <param name="betaald">Een check om te kijken of de reservering betaald is, in het begin is dit altijd 0</param>
+        /// <returns>True als query met succes is uitgevoerd</returns>
         public bool Reserveren(string persoonID, DateTime aankomstDatum, DateTime vertrekDatum, string betaald)
         {
             try
@@ -29,6 +37,13 @@ namespace ICT4Events_WebApplication.Classes
             }
         }
 
+        /// <summary>
+        /// Deze methode voert een query uit die er voor zorgt dat er een reserveringnummer wordt opgezocht in de database
+        /// </summary>
+        /// <param name="persoonID">Het ID van de hoofdboeker, die opgeslagen is in de tabel persoon</param>
+        /// <param name="aankomstDatum">De datum waarop de hoofdboeker aankomt</param>
+        /// <param name="vertrekDatum">De dattum waarop de hoofdboeker vertrekt</param>
+        /// <returns>True als query met succes is uitgevoerd</returns>
         public string VindReserveringNummer(string persoonID, DateTime aankomstDatum, DateTime vertrekDatum)
         {
             try
@@ -54,6 +69,12 @@ namespace ICT4Events_WebApplication.Classes
             }
         }
 
+        /// <summary>
+        /// Deze methode voert een query uit die er voor zorgt dat er een reservering wordt gekoppeld aan de kampeerplaats
+        /// </summary>
+        /// <param name="reserveringID">Het ID van de reservering</param>
+        /// <param name="kampeerplaatsnummer">Het nummer van de kampeerplaats</param>
+        /// <returns>True als query met succes is uitgevoerd</returns>
         public bool KoppelKampeerplaats(string reserveringID, string kampeerplaatsnummer)
         {
             try
@@ -70,6 +91,11 @@ namespace ICT4Events_WebApplication.Classes
             }
         }
 
+        /// <summary>
+        /// Deze methode voert een query uit die er voor zorgt dat het ID van de kampeerplaats wordt opgezocht
+        /// </summary>
+        /// <param name="kampeerPlaatsnummer">Het nummer van de kampeerplaats</param>
+        /// <returns>True als query met succes is uitgevoerd</returns>
         public string VindKampeerplaatsID(int kampeerPlaatsnummer)
         {
             try
@@ -92,6 +118,11 @@ namespace ICT4Events_WebApplication.Classes
             }
         }
 
+        /// <summary>
+        /// Deze methode voert een query uit die er voor zorgt dat de betaling up to date gebracht wordt
+        /// </summary>
+        /// <param name="reserveringNummer">Het nummer van de reservering</param>
+        /// <returns>True als query met succes is uitgevoerd</returns>
         public bool UpdateBetaling(int reserveringNummer)
         {
             try
@@ -107,6 +138,11 @@ namespace ICT4Events_WebApplication.Classes
             }
         }
 
+        /// <summary>
+        /// Deze methode voert een query uit, deze query checkt of het ID van de kampeerplaats voorkomt in de tabel plek_reservering
+        /// </summary>
+        /// <param name="plaatsnummer"></param>
+        /// <returns></returns>
         public string CheckKampeerplaats(int plaatsnummer)
         {
             try

@@ -18,15 +18,17 @@ namespace ICT4Events_WebApplication
 
         protected void btnReserveren_Click(object sender, EventArgs e)
         {
+            //De aankomstdatum is de waarde uit de DateTimePicker
             DateTime aankomstDatum = Convert.ToDateTime(datepickerAankomstDatum.Value);
-            //de aankomstdatum is de waarde uit de DateTimePicker
             DateTime vertrekDatum = Convert.ToDateTime(datepickerVertrekDatum.Value);
-            //de vertrekdatum is de waarde uit de DateTimePicker
+            //De vertrekdatum is de waarde uit de DateTimePicker
             string persoonID = tbPersoonID.Text;
             int kampeerplaatsNummer = Convert.ToInt32(tbkampeerplaats.Value);
+            //Er wordt gecontroleerd of de kampeerplaats nog vrij is
             if (reserveringBeheer.CheckKampeerplaats(kampeerplaatsNummer) == null)
             {
                 lblPlaatsBezet.Visible = false;
+                //Er wordt geprobeerd om de reservering toe te voegen aan de database
                 if (reserveringBeheer.Reserveren(persoonID, aankomstDatum, vertrekDatum, "0"))
                 {
                     MessageBox.Show("Reservering Toegevoegd!");
@@ -44,6 +46,7 @@ namespace ICT4Events_WebApplication
             }
         }
 
+        //Deze methode wordt aangeroepen als er een rij gekoppeld wordt aan de gridview. Hierdoor worden de rijen uit de gridview 'clickable'
         protected void gvGebruikers_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
@@ -55,12 +58,14 @@ namespace ICT4Events_WebApplication
             }
         }
 
+        //Deze methode wordt aangeroepen als er een andere rij uit de gridview wordt geselecteerd. De waarde uit de eerste kolom van de geselecteerd rij wordt weergegeven in een textbox
         protected void gvGebruikers_SelectedIndexChanged(object sender, EventArgs e)
         {
             string persoonID = gvGebruikers.SelectedRow.Cells[0].Text;
             tbPersoonID.Text = persoonID;
         }
 
+        //Deze methode wordt aangeroepen als er een rij gekoppeld wordt aan de gridview. Hierdoor worden de rijen uit de gridview 'clickable'
         protected void gvReserveringen_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
@@ -72,12 +77,14 @@ namespace ICT4Events_WebApplication
             }
         }
 
+        //Deze methode wordt aangeroepen als er een andere rij uit de gridview wordt geselecteerd. De waarde uit de eerste kolom van de geselecteerd rij wordt weergegeven in een textbox
         protected void gvReserveringen_SelectedIndexChanged(object sender, EventArgs e)
         {
             string reserveringID = gvReserveringen.SelectedRow.Cells[0].Text;
             tbReserveringID.Text = reserveringID;
         }
 
+        //Methode die wordt aangeroepen als er op de button 'Betaald' geklikt wordt
         protected void btnBetaald_Click(object sender, EventArgs e)
         {
             int reserveringID = Convert.ToInt32(tbReserveringID.Text);
