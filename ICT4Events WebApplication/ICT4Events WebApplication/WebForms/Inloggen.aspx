@@ -13,7 +13,7 @@
         <br />
         <asp:TextBox ID="TbWachtwoord" runat="server"></asp:TextBox>
         <br />
-        <asp:Button ID="Button1" runat="server" Text="Inloggen" OnClick="Button1_Click" />
+        <asp:Button ID="Button1" runat="server" Text="Inloggen" OnClick="BtnLogin_Click" />
         <br />
         <asp:Label ID="LbError" runat="server" Text="Error"></asp:Label>
     </div>

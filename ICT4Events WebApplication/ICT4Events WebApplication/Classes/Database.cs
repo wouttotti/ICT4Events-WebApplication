@@ -58,7 +58,7 @@ namespace ICT4Events_WebApplication.Classes
         }
 
         //Er wordt een insert query gedaan in de database
-        public bool Insert(string sql)
+        public string Insert(string sql)
         {
             try
             {
@@ -66,11 +66,11 @@ namespace ICT4Events_WebApplication.Classes
                 OracleDataAdapter DataAdapter = new OracleDataAdapter(sql, connection);
                 DataSet Data = new DataSet();
                 DataAdapter.Fill(Data);
-                return true;
+                return "True";
             }
             catch (OracleException)
             {
-                return false;
+                return "Unique";
             }
             finally
             {
