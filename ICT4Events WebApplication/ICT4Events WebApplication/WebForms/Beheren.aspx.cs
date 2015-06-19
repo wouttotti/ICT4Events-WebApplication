@@ -62,6 +62,11 @@ namespace ICT4Events_WebApplication
 
         protected void btnLaatzien_Click(object sender, EventArgs e)
         {
+            RefreshListBox();
+        }
+
+        private void RefreshListBox()
+        {
             ListBGebruikers.Items.Clear();
             DataTable dt = new DataTable();
             if (cbAanwezig.Checked == true)
@@ -79,5 +84,33 @@ namespace ICT4Events_WebApplication
                 ListBGebruikers.Items.Add(RowItem);
             }
         }
+
+        protected void tbBarcode_TextChanged(object sender, EventArgs e)
+        {
+            if(TbBarcode.Text != "")
+            {
+                if(gebruikerbeheer.Aanwezig(TbBarcode.Text) == true)
+                {
+                    pnStatus.Visible = true;
+                    pnStatus.ControlStyle.BackColor = System.Drawing.Color.Green;
+                    TimerPanelReset.Enabled = true;
+                }
+                else
+                {
+                    pnStatus.Visible = true;
+                    pnStatus.ControlStyle.BackColor = System.Drawing.Color.Red;
+                    TimerPanelReset.Enabled = true;
+                }
+            }
+            RefreshListBox();
+        }
+
+        protected void TimerPanelReset_Tick(object sender, EventArgs e)
+        {
+            TbBarcode.Text = "";
+            pnStatus.ControlStyle.BackColor = ColorTranslator.FromHtml("#efeeef");
+            TimerPanelReset.Enabled = false;
+        }
+
     }
 }

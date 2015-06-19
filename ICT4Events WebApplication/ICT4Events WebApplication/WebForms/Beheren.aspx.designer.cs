@@ -211,13 +211,13 @@ namespace ICT4Events_WebApplication {
         protected global::System.Web.UI.WebControls.Label lbBarcode;
         
         /// <summary>
-        /// tbBarcode control.
+        /// TbBarcode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbBarcode;
+        protected global::System.Web.UI.WebControls.TextBox TbBarcode;
         
         /// <summary>
         /// pnStatus control.
@@ -229,12 +229,12 @@ namespace ICT4Events_WebApplication {
         protected global::System.Web.UI.WebControls.Panel pnStatus;
         
         /// <summary>
-        /// lbStatus control.
+        /// TimerPanelReset control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbStatus;
+        protected global::System.Web.UI.Timer TimerPanelReset;
     }
 }

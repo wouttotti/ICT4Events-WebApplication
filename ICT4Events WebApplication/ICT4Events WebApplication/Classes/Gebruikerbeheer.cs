@@ -12,8 +12,8 @@ namespace ICT4Events_WebApplication.Classes
 
         public string GebruikerToevoegen(string email, string naam, string wachtwoord, int admin)
         {
-            string sql = @"INSERT INTO ACCOUNT(""gebruikersnaam"", ""email"", ""wachtwoord"", ""admin"", ""activatiehash"", ""geactiveerd"") VALUES('" + naam + "', '" + email + "', '" + wachtwoord + "', '" + admin + "', 0, 0)";
-            string Return = database.Insert(sql);
+            string adminCheck = Convert.ToString(admin);
+            string Return = database.ExecuteProcedure(email, naam, wachtwoord, adminCheck);
            
             return Return;
         }
@@ -67,6 +67,35 @@ namespace ICT4Events_WebApplication.Classes
                 }
                 throw new NoDataException("Gebruikersnaam bestaat niet.");
             }
+        }
+        public bool Aanwezig(string barcode)
+        {
+            DataTable dt = new DataTable();
+            string sql = @"SELECT * FROM ACCOUNT WHERE ""barcodeID"" = '" + barcode + "'";
+            dt = database.voerQueryUit(sql);
+            if(dt.Rows.Count == 0)
+            {
+                return false;
+            }
+            else
+            {
+                foreach(DataRow temp in dt.Rows)
+                {
+                    if(Convert.ToInt32(temp["geactiveerd"].ToString()) == 1)
+                    {
+                        string sqlUpdate = @"UPDATE ACCOUNT SET ""geactiveerd"" = 0 WHERE ""barcodeID"" = '" + barcode + "'";
+                        database.Insert(sqlUpdate);
+                        return true;
+                    }
+                    else
+                    {
+                        string sqlUpdate = @"UPDATE ACCOUNT SET ""geactiveerd"" = 1 WHERE ""barcodeID"" = '" + barcode + "'";
+                        database.Insert(sqlUpdate);
+                        return true;
+                    }
+                }
+            }
+            return false;
         }
     }
 }
