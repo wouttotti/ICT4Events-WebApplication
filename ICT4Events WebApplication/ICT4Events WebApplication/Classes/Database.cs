@@ -24,7 +24,6 @@ namespace ICT4Events_WebApplication.Classes
             try
             {
                 connection.Open();
-                MessageBox.Show("Gelukt!");
             }
             catch (OracleException exc)
             {
@@ -58,7 +57,7 @@ namespace ICT4Events_WebApplication.Classes
         }
 
         //Er wordt een insert query gedaan in de database
-        public bool Insert(string sql)
+        public string Insert(string sql)
         {
             try
             {
@@ -66,16 +65,47 @@ namespace ICT4Events_WebApplication.Classes
                 OracleDataAdapter DataAdapter = new OracleDataAdapter(sql, connection);
                 DataSet Data = new DataSet();
                 DataAdapter.Fill(Data);
-                return true;
+                return "True";
             }
             catch (OracleException)
             {
-                return false;
+                return "Unique";
             }
             finally
             {
                 connection.Close();
             }
+        }
+
+        public string ExecuteProcedure(string email, string naam, string wachtwoord, string admin)
+        {   
+            using(OracleConnection objConn = new OracleConnection("User Id=system;Password=P@ssw0rd;Data Source=//192.168.20.71/xe;"))
+            {
+                OracleCommand cmd = new OracleCommand();
+                cmd.Connection = objConn;
+                cmd.Parameters.Add("v_gebruikersnaam", OracleDbType.Varchar2).Value = naam;
+                cmd.Parameters.Add("v_email", OracleDbType.Varchar2).Value = email;
+                cmd.Parameters.Add("v_wachtwoord", OracleDbType.Varchar2).Value = wachtwoord;
+                cmd.Parameters.Add("v_admin", OracleDbType.Varchar2).Value = admin;
+                cmd = new OracleCommand("ACCOUNTAANMAKEN", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                try
+                {
+                    objConn.Open();
+                    cmd.ExecuteNonQuery();
+
+                    return "true";
+                }
+                catch(OracleException)
+                {
+                    return "Unique";    
+                }
+                finally
+                {
+                    objConn.Close();
+                }
+            }
+            
         }
 
         public bool Update(string selectSql, string updateSql)

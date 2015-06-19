@@ -22,40 +22,58 @@ namespace ICT4Events_WebApplication {
         protected global::System.Web.UI.WebControls.SqlDataSource AlleGebruikers;
         
         /// <summary>
-        /// GridView1 control.
+        /// gvGebruikers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView gvGebruikers;
         
         /// <summary>
-        /// lblKampeerplaats control.
+        /// tbPersoonID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblKampeerplaats;
+        protected global::System.Web.UI.WebControls.TextBox tbPersoonID;
         
         /// <summary>
-        /// tbKampeerplaats control.
+        /// tbkampeerplaats control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbKampeerplaats;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText tbkampeerplaats;
         
         /// <summary>
-        /// lnkBtnMap control.
+        /// lblPlaatsBezet control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkBtnMap;
+        protected global::System.Web.UI.WebControls.Label lblPlaatsBezet;
+        
+        /// <summary>
+        /// datepickerAankomstDatum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText datepickerAankomstDatum;
+        
+        /// <summary>
+        /// datepickerVertrekDatum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText datepickerVertrekDatum;
         
         /// <summary>
         /// btnReserveren control.
@@ -67,13 +85,31 @@ namespace ICT4Events_WebApplication {
         protected global::System.Web.UI.WebControls.Button btnReserveren;
         
         /// <summary>
-        /// checkListReserveringen control.
+        /// gvReserveringen control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList checkListReserveringen;
+        protected global::System.Web.UI.WebControls.GridView gvReserveringen;
+        
+        /// <summary>
+        /// AlleReserveringen control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource AlleReserveringen;
+        
+        /// <summary>
+        /// tbReserveringID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbReserveringID;
         
         /// <summary>
         /// btnBetaald control.
@@ -83,5 +119,17 @@ namespace ICT4Events_WebApplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnBetaald;
+        
+        /// <summary>
+        /// PreviousPage property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new ICT4Events_WebApplication.WebForms.Map PreviousPage {
+            get {
+                return ((ICT4Events_WebApplication.WebForms.Map)(base.PreviousPage));
+            }
+        }
     }
 }

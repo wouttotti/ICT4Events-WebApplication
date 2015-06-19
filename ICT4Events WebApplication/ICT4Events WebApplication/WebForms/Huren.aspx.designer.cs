@@ -13,31 +13,31 @@ namespace ICT4Events_WebApplication {
     public partial class Huren {
         
         /// <summary>
-        /// CheckBoxList1 control.
+        /// ListBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList CheckBoxList1;
+        protected global::System.Web.UI.WebControls.ListBox ListBox1;
         
         /// <summary>
-        /// btnVerplaatsen control.
+        /// lbHuurExemplaren control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnVerplaatsen;
+        protected global::System.Web.UI.WebControls.ListBox lbHuurExemplaren;
         
         /// <summary>
-        /// CheckBoxList2 control.
+        /// Panel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList CheckBoxList2;
+        protected global::System.Web.UI.WebControls.Panel Panel1;
         
         /// <summary>
         /// tb control.
@@ -47,6 +47,15 @@ namespace ICT4Events_WebApplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tb;
+        
+        /// <summary>
+        /// btnSearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSearch;
         
         /// <summary>
         /// btnInfo control.
@@ -67,6 +76,15 @@ namespace ICT4Events_WebApplication {
         protected global::System.Web.UI.WebControls.Button btnWissen;
         
         /// <summary>
+        /// labeltje control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label labeltje;
+        
+        /// <summary>
         /// lblBorg control.
         /// </summary>
         /// <remarks>
@@ -74,6 +92,15 @@ namespace ICT4Events_WebApplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblBorg;
+        
+        /// <summary>
+        /// cbBetaald control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox cbBetaald;
         
         /// <summary>
         /// btnUitlenen control.
