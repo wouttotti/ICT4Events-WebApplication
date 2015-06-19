@@ -5,15 +5,19 @@
     <div id="Gebruikers" style="width:250px; height: 450px; float: left; display:block">
         <asp:Label ID="LbGebruiker" runat="server" Text="Gebruikers"></asp:Label>
         <br />
-        <asp:ListBox ID="LbGebruikers" runat="server" Height="400px" Width="250px"></asp:ListBox>
+        <asp:ListBox ID="ListBGebruikers" runat="server" Height="400px" Width="250px"></asp:ListBox>
 
     </div>
-    <div style="float:left; margin-left:110px; margin-right:110px; margin-top:20px; display:inline-block" align="center">
+    <div style="float:left; margin-left:110px; margin-right:auto; margin-top:20px; display:inline-block" align="center">
         <asp:Button ID="btnAanpassen" runat="server" Text="Aanpassen"/>
         <br />
-        <asp:Button ID="btnLaatzien" runat="server" Text="Laat zien"/>
+        <asp:Button ID="btnLaatzien" runat="server" Text="Laat zien" OnClick="btnLaatzien_Click"/>
         <br />
         <asp:CheckBox ID="cbAanwezig" runat="server" Text="Aanwezig" />
+        <br />
+        <br />
+        <br />
+        <asp:Label ID="LbError" runat="server" Text="Label" Visible="false"></asp:Label>
     </div>
     <div id="Persoons Gegevens" style="width:350px; height:auto; float:right; display:inline-block">
         <section>

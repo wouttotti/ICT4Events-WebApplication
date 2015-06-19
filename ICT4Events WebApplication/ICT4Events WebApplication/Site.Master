@@ -47,10 +47,10 @@
                 <br />
                 <br />
                 <section id="login">
-                    <ul style="font-family: Consolas">
+                    <ul style="font-family: Consolas" runat="server">
                         <li>
-                            <a id="registerLink" runat="server" href="/WebForms/Inloggen.aspx">Inloggen</a></li>
-                        <li><a id="loginLink" runat="server" href="/WebForms/Uitloggen.aspx">Uitloggen</a></li>
+                            <a id="InlogLink" runat="server" href="/WebForms/Inloggen.aspx">Inloggen</a></li>
+                        <li><a id="UitlogLink" runat="server" href="/WebForms/Uitloggen.aspx">Uitloggen</a></li>
                     </ul>
                 </section>
                 <nav>

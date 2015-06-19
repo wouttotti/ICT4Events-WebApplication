@@ -58,13 +58,13 @@ namespace ICT4Events_WebApplication {
         protected global::System.Web.UI.WebControls.TextBox TbWachtwoord;
         
         /// <summary>
-        /// Button1 control.
+        /// BtnLogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button BtnLogin;
         
         /// <summary>
         /// LbError control.

@@ -22,13 +22,13 @@ namespace ICT4Events_WebApplication {
         protected global::System.Web.UI.WebControls.Label LbGebruiker;
         
         /// <summary>
-        /// LbGebruikers control.
+        /// ListBGebruikers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox LbGebruikers;
+        protected global::System.Web.UI.WebControls.ListBox ListBGebruikers;
         
         /// <summary>
         /// btnAanpassen control.
@@ -56,6 +56,15 @@ namespace ICT4Events_WebApplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox cbAanwezig;
+        
+        /// <summary>
+        /// LbError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbError;
         
         /// <summary>
         /// LbPersoonsGegevens control.

@@ -31,22 +31,22 @@ namespace ICT4Events_WebApplication {
         protected global::System.Web.UI.WebControls.Label LbUsername;
         
         /// <summary>
-        /// registerLink control.
+        /// InlogLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor registerLink;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor InlogLink;
         
         /// <summary>
-        /// loginLink control.
+        /// UitlogLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor loginLink;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor UitlogLink;
         
         /// <summary>
         /// MainContent control.
