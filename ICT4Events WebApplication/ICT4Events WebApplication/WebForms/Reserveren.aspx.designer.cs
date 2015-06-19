@@ -31,15 +31,6 @@ namespace ICT4Events_WebApplication {
         protected global::System.Web.UI.WebControls.GridView gvGebruikers;
         
         /// <summary>
-        /// lblPersoonID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPersoonID;
-        
-        /// <summary>
         /// tbPersoonID control.
         /// </summary>
         /// <remarks>
@@ -49,13 +40,13 @@ namespace ICT4Events_WebApplication {
         protected global::System.Web.UI.WebControls.TextBox tbPersoonID;
         
         /// <summary>
-        /// lblKampeerplaats control.
+        /// tbkampeerplaats control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblKampeerplaats;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText tbkampeerplaats;
         
         /// <summary>
         /// lblPlaatsBezet control.
@@ -112,6 +103,15 @@ namespace ICT4Events_WebApplication {
         protected global::System.Web.UI.WebControls.SqlDataSource AlleReserveringen;
         
         /// <summary>
+        /// tbReserveringID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbReserveringID;
+        
+        /// <summary>
         /// btnBetaald control.
         /// </summary>
         /// <remarks>
@@ -119,5 +119,17 @@ namespace ICT4Events_WebApplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnBetaald;
+        
+        /// <summary>
+        /// PreviousPage property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new ICT4Events_WebApplication.WebForms.Map PreviousPage {
+            get {
+                return ((ICT4Events_WebApplication.WebForms.Map)(base.PreviousPage));
+            }
+        }
     }
 }

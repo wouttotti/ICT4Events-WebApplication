@@ -12,6 +12,7 @@
     <form id="form1" runat="server">
     <input runat="server" type="text" id="tbPlaatsNummer"/>
      <input runat="server" type="button" value="Send" onclick="GetValue();"/>
+        <br />
     </form>
     <p>
     <map name="camping" id="campingMap">
@@ -38,7 +39,7 @@
 
             function GetValue() {
                 if (window.opener != null && !window.opener.closed) {
-                    var plaatsnummer = window.opener.document.getElementById("tbkampeerplaats");
+                    var plaatsnummer = window.opener.document.getElementById("MainContent_tbkampeerplaats");
                     plaatsnummer.value = document.getElementById("tbPlaatsNummer").value;
                 }
                 window.close();

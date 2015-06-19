@@ -91,5 +91,41 @@ namespace ICT4Events_WebApplication.Classes
                 return null;
             }
         }
+
+        public bool UpdateBetaling(int reserveringNummer)
+        {
+            try
+            {
+                string queryInsert =
+                    "UPDATE Reservering SET \"Betaald\" + = '1' WHERE \"id\"= '" + reserveringNummer + "'";
+                database.Insert(queryInsert);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public string CheckKampeerplaats(int plaatsnummer)
+        {
+            try
+            {
+                string query = "SELECT id FROM plek_reservering WHERE \"plek_id\"= '" + plaatsnummer + "'";
+                DataTable plekReserveringID = database.voerQueryUit(query);
+                string[] array = new string[1];
+                foreach (DataRow dr in plekReserveringID.Rows)
+                {
+                    array[0] = dr[0].ToString();
+                }
+                string plekID = array.GetValue(0).ToString();
+                return plekID;
+
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
     }
 }

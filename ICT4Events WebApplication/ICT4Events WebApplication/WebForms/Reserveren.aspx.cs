@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
+
 using ICT4Events_WebApplication.Classes;
 
 namespace ICT4Events_WebApplication
 {
     using System.Windows.Forms;
-
-    using TextBox = System.Web.UI.WebControls.TextBox;
 
     public partial class Reserveren : System.Web.UI.Page
     {
@@ -29,16 +23,24 @@ namespace ICT4Events_WebApplication
             DateTime vertrekDatum = Convert.ToDateTime(datepickerVertrekDatum.Value);
             //de vertrekdatum is de waarde uit de DateTimePicker
             string persoonID = tbPersoonID.Text;
-            int kampeerplaatsNummer = 200;
-            if (reserveringBeheer.Reserveren(persoonID, aankomstDatum, vertrekDatum, "0"))
+            int kampeerplaatsNummer = Convert.ToInt32(tbkampeerplaats.Value);
+            if (reserveringBeheer.CheckKampeerplaats(kampeerplaatsNummer) == null)
             {
-                MessageBox.Show("Reservering Toegevoegd!");
+                lblPlaatsBezet.Visible = false;
+                if (reserveringBeheer.Reserveren(persoonID, aankomstDatum, vertrekDatum, "0"))
+                {
+                    MessageBox.Show("Reservering Toegevoegd!");
+                }
+                string reserveringNummer = reserveringBeheer.VindReserveringNummer(persoonID, aankomstDatum, vertrekDatum);
+                string kampeerplaatsID = reserveringBeheer.VindKampeerplaatsID(kampeerplaatsNummer);
+                if (reserveringBeheer.KoppelKampeerplaats(reserveringNummer, kampeerplaatsID))
+                {
+                    MessageBox.Show("Kampeerplaats gekoppeld");
+                }
             }
-            string reserveringNummer = reserveringBeheer.VindReserveringNummer(persoonID, aankomstDatum, vertrekDatum);
-            string kampeerplaatsID = reserveringBeheer.VindKampeerplaatsID(kampeerplaatsNummer);
-            if (reserveringBeheer.KoppelKampeerplaats(reserveringNummer, kampeerplaatsID))
+            else
             {
-                MessageBox.Show("Kampeerplaats gekoppeld");
+                lblPlaatsBezet.Visible = true;
             }
         }
 
@@ -57,6 +59,37 @@ namespace ICT4Events_WebApplication
         {
             string persoonID = gvGebruikers.SelectedRow.Cells[0].Text;
             tbPersoonID.Text = persoonID;
+        }
+
+        protected void gvReserveringen_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                e.Row.Attributes["onclick"] = Page.ClientScript.GetPostBackClientHyperlink(
+                    gvReserveringen,
+                    "Select$" + e.Row.RowIndex);
+                e.Row.Attributes["style"] = "cursor:pointer";
+            }
+        }
+
+        protected void gvReserveringen_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string reserveringID = gvReserveringen.SelectedRow.Cells[0].Text;
+            tbReserveringID.Text = reserveringID;
+        }
+
+        protected void btnBetaald_Click(object sender, EventArgs e)
+        {
+            int reserveringID = Convert.ToInt32(tbReserveringID.Text);
+            //In de database wordt de betaling bijgewerkt aan de hand van het reserveringsnummer
+            if (reserveringBeheer.UpdateBetaling(reserveringID))
+            {
+                MessageBox.Show("Reservering: " + reserveringID + " is betaald");
+            }
+            else
+            {
+                MessageBox.Show("Betaling kan niet worden gewijzigd");
+            }
         }
     }
 }
