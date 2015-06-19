@@ -178,7 +178,21 @@ namespace ICT4Events_WebApplication
         /// </summary>
         protected void btnWissen_Click(object sender, EventArgs e)
         {
-            lbHuurExemplaren.Items.Clear();
+            List<ListItem> geselecteerdeExemplaren = new List<ListItem>();
+
+            foreach (ListItem li in lbHuurExemplaren.Items)
+            {
+                if (li.Selected)
+                {
+                    geselecteerdeExemplaren.Add(li);
+                }
+            }
+
+            foreach (ListItem li in geselecteerdeExemplaren)
+            {
+                lbHuurExemplaren.Items.Remove(li);
+            }
+            
         }
 
         /// <summary>
