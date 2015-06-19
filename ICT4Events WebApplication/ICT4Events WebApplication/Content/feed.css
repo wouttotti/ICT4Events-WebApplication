@@ -27,6 +27,13 @@
     font-family: Consolas;
     margin-right: 0px;
 }
+.button
+{
+    margin-left: 5px;
+    border-radius: 4px;
+    font-family: Consolas;
+    margin-right: 0px;
+}
 .btPost
 {
     float:right;
@@ -113,4 +120,8 @@ font-family: Consolas;
 .CheckBoxsorteer1
 {
 
+}
+#likemenu
+{
+    clear:both;
 }

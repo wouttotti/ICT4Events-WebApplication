@@ -130,6 +130,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\feed.css" />
     <Content Include="Images\play.png" />
     <Content Include="WebForms\Beheren.aspx" />
     <Content Include="Content\Site.css" />
