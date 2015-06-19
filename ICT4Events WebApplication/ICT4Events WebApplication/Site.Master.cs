@@ -68,6 +68,20 @@ namespace ICT4Events_WebApplication
         protected void Page_Load(object sender, EventArgs e)
         {
             LbUsername.Visible = false;
+            if (Session["EMAIL"] != null)
+            {
+                LbUsername.Text = Session["EMAIL"].ToString(); ;
+                LbUsername.Visible = true;
+                InlogLink.Visible = false;
+                UitlogLink.Visible = true;
+            }
+            else
+            {
+                LbUsername.Visible = false;
+                InlogLink.Visible = true;
+                UitlogLink.Visible = false;
+
+            }
         }
     }
 }
