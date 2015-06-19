@@ -75,7 +75,7 @@ namespace ICT4Events_WebApplication
                 index++;
             }
             string insertsql = "INSERT INTO bijdrage(\"ID\", \"account_id\", \"datum\", \"soort\", \"like\", \"ongewenst\") VALUES(" + index + ", 4, SYSDATE, 'bericht', 0,0)";
-            if(database.Insert(insertsql))
+            if (database.Insert(insertsql) == "True")
             {
                 ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('Het bericht is succesvol geplaats.');", true);
             }
@@ -84,7 +84,7 @@ namespace ICT4Events_WebApplication
                 ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('Er is iets fout gegaan bij het inserten in bijdrage');", true);
             }
             string insert2sql = "INSERT INTO bericht(\"bijdrage_id\", \"titel\", \"inhoud\") VALUES (" + index + ", '" + tbTitel.Text + "', '" + tbBericht.Text + "')";
-            if(database.Insert(insert2sql))
+            if (database.Insert(insert2sql) == "True")
             {
                 ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('Het bericht is succesvol geplaats.');", true);
             }
@@ -138,7 +138,7 @@ namespace ICT4Events_WebApplication
                 int vindikleuks = Convert.ToInt32(leuks);
                 vindikleuks++;
                 string insert = "Update bijdrage set \"like\" = "+ vindikleuks + " where  \"ID\" = " + Convert.ToInt32(tbIdentificeer.Text);
-                if(database.Insert(insert))
+                if (database.Insert(insert) == "True")
                 {
                     ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('U heeft het bericht geliked');", true);
                 }
@@ -230,10 +230,10 @@ namespace ICT4Events_WebApplication
                     }
                     string insert = "INSERT INTO bijdrage(\"ID\", \"account_id\", \"datum\", \"soort\", \"like\", \"ongewenst\") VALUES(" + index + ", 4, SYSDATE, 'bericht', 0,0)";
 
-                    if(database.Insert(insert))
+                    if(database.Insert(insert) == "True")
                     {
                         string inserten = "INSERT INTO bestand(\"bijdrage_id\", \"categorie_id\", \"bestandslocatie\", \"grootte\") VALUES(" + index + ", 1, '"+ tbPad.Text +"' , 30)";
-                        if (database.Insert(inserten))
+                        if (database.Insert(inserten) == "True")
                         {
                             ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('Het bericht is succesvol geplaats.');", true);
                         }
