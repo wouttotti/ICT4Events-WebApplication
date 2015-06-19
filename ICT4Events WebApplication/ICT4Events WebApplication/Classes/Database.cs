@@ -24,7 +24,6 @@ namespace ICT4Events_WebApplication.Classes
             try
             {
                 connection.Open();
-                MessageBox.Show("Gelukt!");
             }
             catch (OracleException exc)
             {
